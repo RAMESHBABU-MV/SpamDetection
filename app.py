@@ -13,7 +13,6 @@ model = joblib.load("spam_model.pkl")
 
 # UI
 st.title("📧 Spam Detection Engine")
-st.subheader("Operational ML. Zero drama.")
 st.write("Enter a message and let the model decide if it's spam or legit.")
 
 # User input
