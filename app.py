@@ -1,5 +1,5 @@
 import streamlit as st
-import pickle
+import joblib
 
 # Page config (branding matters)
 st.set_page_config(
@@ -9,13 +9,12 @@ st.set_page_config(
 )
 
 # Load model
-with open("spam_model.pkl", "rb") as f:
-    model = pickle.load(f)
+model = joblib.load("spam_model.pkl")
 
 # UI
 st.title("📧 Spam Detection Engine")
 st.subheader("Operational ML. Zero drama.")
-st.write("Enter a message and let the model decide if it’s spam or legit.")
+st.write("Enter a message and let the model decide if it's spam or legit.")
 
 # User input
 message = st.text_area("Your message here", height=150)
